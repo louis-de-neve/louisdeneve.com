@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Louis Deneve - Personal Website</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+        .posts-section {
+            margin-top: 40px;
+        }
+        .post {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background: #f9f9f9;
+        }
+        .post h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .post-meta {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        .read-more {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .read-more:hover {
+            text-decoration: underline;
+        }
+        .loading {
+            text-align: center;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Louis Deneve</h1>
+        <p>Welcome to my personal website</p>
+    </div>
+
+    <section>
+        <h2>About Me</h2>
+        <p>Add your personal information here...</p>
+    </section>
+
+    <section class="posts-section">
+        <h2>Latest Posts from My Substack</h2>
+        <div id="substack-posts" class="loading">Loading posts...</div>
+    </section>
+
+    <script>
+        // Replace 'your-substack-name' with your actual Substack subdomain
+        const SUBSTACK_URL = 'https://louisdeneve.substack.com';
+        
+        async function fetchSubstackPosts() {
+            try {
+                // Using a CORS proxy service - you might want to set up your own
+                const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${SUBSTACK_URL}/feed`);
+                const data = await response.json();
+                
+                if (data.status === 'ok') {
+                    displayPosts(data.items.slice(0, 5)); // Show latest 5 posts
+                } else {
+                    throw new Error('Failed to fetch posts');
+                }
+            } catch (error) {
+                console.error('Error fetching Substack posts:', error);
+                document.getElementById('substack-posts').innerHTML = 
+                    '<p>Unable to load posts at the moment. <a href="' + SUBSTACK_URL + '">Visit my Substack directly</a></p>';
+            }
+        }
+
+        function displayPosts(posts) {
+            const container = document.getElementById('substack-posts');
+            
+            if (posts.length === 0) {
+                container.innerHTML = '<p>No posts available yet.</p>';
+                return;
+            }
+
+            const postsHTML = posts.map(post => {
+                const date = new Date(post.pubDate).toLocaleDateString();
+                const description = post.description.replace(/<[^>]*>/g, '').substring(0, 200) + '...';
+                
+                return `
+                    <div class="post">
+                        <h3><a href="${post.link}" target="_blank" rel="noopener">${post.title}</a></h3>
+                        <div class="post-meta">Published on ${date}</div>
+                        <p>${description}</p>
+                        <a href="${post.link}" target="_blank" rel="noopener" class="read-more">Read full post →</a>
+                    </div>
+                `;
+            }).join('');
+
+            container.innerHTML = postsHTML;
+        }
+
+        // Load posts when page loads
+        document.addEventListener('DOMContentLoaded', fetchSubstackPosts);
+    </script>
+</body>
+</html>
