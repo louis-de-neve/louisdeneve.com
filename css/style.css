@@ -235,62 +235,6 @@ footer {
 .pub-venue { font-size: 0.78rem; color: #888; font-style: italic; }
 
 /* ===========================
-   Substack feed
-   =========================== */
-.substack-list { display: flex; flex-direction: column; gap: 14px; }
-
-.substack-post {
-  display: block;
-  padding: 16px 18px;
-  border: 1px solid #e8e8e8;
-  border-radius: 10px;
-  transition: border-color 0.15s, box-shadow 0.15s;
-  color: inherit;
-}
-
-.substack-post:hover { border-color: #d0d0d0; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
-
-.substack-post .post-date { font-size: 0.73rem; color: #999; margin-bottom: 3px; }
-.substack-post .post-title { font-size: 0.92rem; font-weight: 600; color: #111; margin-bottom: 5px; line-height: 1.35; }
-.substack-post:hover .post-title { color: #1a56db; }
-
-.substack-post .post-excerpt {
-  font-size: 0.8rem;
-  color: #666;
-  line-height: 1.5;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.substack-post .post-read-more {
-  display: inline-block;
-  margin-top: 8px;
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: #1a56db;
-}
-
-.substack-skeleton {
-  border: 1px solid #e8e8e8;
-  border-radius: 10px;
-  padding: 16px 18px;
-  animation: pulse 1.5s ease-in-out infinite;
-}
-
-.skel-line { background: #ebebeb; border-radius: 4px; height: 12px; margin-bottom: 8px; }
-.skel-line.short  { width: 28%; height: 10px; }
-.skel-line.title  { width: 80%; height: 14px; }
-.skel-line.body   { width: 100%; }
-.skel-line.body2  { width: 65%; margin-bottom: 0; }
-
-@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.45} }
-
-.substack-error { font-size: 0.875rem; color: #666; padding: 16px 0; }
-.substack-error a { color: #1a56db; font-weight: 500; }
-
-/* ===========================
    Page header (travel & academic)
    =========================== */
 .page-header {
