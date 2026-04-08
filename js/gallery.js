@@ -8,15 +8,22 @@
   var allPhotos = [];
   var current   = 0;
 
-  document.querySelectorAll('.photo-grid img').forEach(function (img) {
-    allPhotos.push({ src: img.src, alt: img.alt });
-    img.addEventListener('click', function () {
-      current = allPhotos.findIndex(function (p) { return p.src === img.src; });
-      open(current);
-    });
-  });
+  function titleFromFilename(filename) {
+    return filename.replace(/\.[^/.]+$/, '').replace(/[-_]/g, ' ');
+  }
 
-  function open(idx) {
+  function initLightbox() {
+    allPhotos = [];
+    document.querySelectorAll('.photo-grid img').forEach(function (img) {
+      allPhotos.push({ src: img.src, alt: img.alt });
+      img.addEventListener('click', function () {
+        current = allPhotos.findIndex(function (p) { return p.src === img.src; });
+        openLightbox(current);
+      });
+    });
+  }
+
+  function openLightbox(idx) {
     current = idx;
     lbImg.src = allPhotos[idx].src;
     lbImg.alt = allPhotos[idx].alt;
@@ -24,26 +31,47 @@
     document.body.style.overflow = 'hidden';
   }
 
-  function close() {
+  function closeLightbox() {
     lightbox.classList.remove('open');
     document.body.style.overflow = '';
   }
 
-  function prev() { open((current - 1 + allPhotos.length) % allPhotos.length); }
-  function next() { open((current + 1) % allPhotos.length); }
+  function prev() { openLightbox((current - 1 + allPhotos.length) % allPhotos.length); }
+  function next() { openLightbox((current + 1) % allPhotos.length); }
 
-  document.getElementById('lb-close').addEventListener('click', close);
+  document.getElementById('lb-close').addEventListener('click', closeLightbox);
   document.getElementById('lb-prev').addEventListener('click', prev);
   document.getElementById('lb-next').addEventListener('click', next);
 
   lightbox.addEventListener('click', function (e) {
-    if (e.target === lightbox) close();
+    if (e.target === lightbox) closeLightbox();
   });
 
   document.addEventListener('keydown', function (e) {
     if (!lightbox.classList.contains('open')) return;
-    if (e.key === 'Escape')      close();
+    if (e.key === 'Escape')      closeLightbox();
     if (e.key === 'ArrowLeft')   prev();
     if (e.key === 'ArrowRight')  next();
   });
+
+  fetch('photos/travel/manifest.json')
+    .then(function (res) { return res.json(); })
+    .then(function (trips) {
+      trips.forEach(function (trip) {
+        var article = document.querySelector('article[data-trip="' + trip.id + '"]');
+        if (!article) return;
+        var grid = article.querySelector('.photo-grid');
+        if (!grid) return;
+        trip.images.forEach(function (filename) {
+          var img = document.createElement('img');
+          img.src = 'photos/travel/' + trip.id + '/' + filename;
+          img.alt = titleFromFilename(filename);
+          grid.appendChild(img);
+        });
+      });
+      initLightbox();
+    })
+    .catch(function (err) {
+      console.error('Failed to load photo manifest:', err);
+    });
 })();

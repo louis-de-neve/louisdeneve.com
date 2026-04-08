@@ -3,7 +3,7 @@ frontend:
   phases:
     build:
       commands:
-        - echo "Deploying static website with Substack integration"
+        - node scripts/generate-manifest.js
   artifacts:
     baseDirectory: /
     files:
