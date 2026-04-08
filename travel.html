@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel &mdash; Louis de Neve</title>
+  <meta name="description" content="Travel photography by Louis de Neve — landscapes, light, and stories from around the world.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a class="nav-logo" href="index.html">Louis de Neve</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="travel.html" class="active">Travel</a></li>
+        <li><a href="academic.html">Academic</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <header class="page-header">
+      <h1>Travel</h1>
+      <p>Photography and writing from travels across six continents. I try to document places with care — landscape, light, and the small details that tell a story.</p>
+    </header>
+
+    <!-- Patagonia -->
+    <article class="trip" id="patagonia">
+      <div class="trip-location">Torres del Paine, Chile</div>
+      <div class="trip-header">
+        <h2>Patagonia: At the End of the World</h2>
+        <span class="trip-date">March 2024</span>
+      </div>
+      <p class="trip-desc">
+        Trekking through the dramatic landscapes of southern Patagonia — wind-battered plains, turquoise glacial lakes, and the iconic granite spires of Torres del Paine. Five days on the W Trek, condors overhead, and a puma crossing the path at dusk.
+      </p>
+      <div class="photo-grid">
+        <img src="photos/travel/patagonia/01.svg" alt="Torres del Paine spires at sunrise">
+        <img src="photos/travel/patagonia/02.svg" alt="Grey Glacier ice field">
+        <img src="photos/travel/patagonia/03.svg" alt="Guanacos on the pampas">
+        <img src="photos/travel/patagonia/04.svg" alt="Beech forest in autumn">
+        <img src="photos/travel/patagonia/05.svg" alt="Campsite at Mirador Las Torres">
+        <img src="photos/travel/patagonia/06.svg" alt="Lago Pehoé at dusk">
+      </div>
+    </article>
+
+    <!-- Japan -->
+    <article class="trip" id="japan">
+      <div class="trip-location">Kyoto &amp; Nikko, Japan</div>
+      <div class="trip-header">
+        <h2>Autumn Colours in Rural Japan</h2>
+        <span class="trip-date">November 2023</span>
+      </div>
+      <p class="trip-desc">
+        Chasing koyo — the Japanese autumn colour season — through ancient temple gardens and forested mountain roads. The garden at Tofuku-ji before dawn; the Shinkyo Bridge framed in gold; the long blue twilight of Nikko's cedar forest.
+      </p>
+      <div class="photo-grid">
+        <img src="photos/travel/japan/01.svg" alt="Maple garden at Tofuku-ji">
+        <img src="photos/travel/japan/02.svg" alt="Shinkyo Bridge in autumn">
+        <img src="photos/travel/japan/03.svg" alt="Mountain road lined with maples">
+        <img src="photos/travel/japan/04.svg" alt="Red torii gates at Fushimi Inari">
+        <img src="photos/travel/japan/05.svg" alt="Lanterns at dusk in Gion">
+        <img src="photos/travel/japan/06.svg" alt="Stone garden at Ryoan-ji">
+      </div>
+    </article>
+
+    <!-- Morocco -->
+    <article class="trip" id="morocco">
+      <div class="trip-location">Merzouga, Morocco</div>
+      <div class="trip-header">
+        <h2>Into the Sahara</h2>
+        <span class="trip-date">April 2023</span>
+      </div>
+      <p class="trip-desc">
+        A camel trek into the Erg Chebbi dunes, sleeping under an impossible sky of stars on the edge of the Sahara. Then north through the Atlas to the blue city of Chefchaouen, where every alleyway is washed in shades of cobalt and indigo.
+      </p>
+      <div class="photo-grid">
+        <img src="photos/travel/morocco/01.svg" alt="Erg Chebbi dunes at sunset">
+        <img src="photos/travel/morocco/02.svg" alt="Camel caravan silhouette">
+        <img src="photos/travel/morocco/03.svg" alt="Blue alleyways of Chefchaouen">
+        <img src="photos/travel/morocco/04.svg" alt="Palm grove in the oasis">
+        <img src="photos/travel/morocco/05.svg" alt="Sahara stars over the dunes">
+        <img src="photos/travel/morocco/06.svg" alt="Medina rooftops in the blue city">
+      </div>
+    </article>
+
+    <!-- Norway -->
+    <article class="trip" id="norway">
+      <div class="trip-location">Lofoten &amp; Geiranger, Norway</div>
+      <div class="trip-header">
+        <h2>The Norwegian Fjords in Winter</h2>
+        <span class="trip-date">February 2022</span>
+      </div>
+      <p class="trip-desc">
+        Searching for the northern lights above snow-covered rorbuer fishing cabins in the Lofoten archipelago. After two cloudy nights, the sky cleared to reveal dancing curtains of emerald and magenta that filled the entire sky.
+      </p>
+      <div class="photo-grid">
+        <img src="photos/travel/norway/01.svg" alt="Northern lights over Lofoten rorbuer">
+        <img src="photos/travel/norway/02.svg" alt="Snowy mountain peaks over fjord">
+        <img src="photos/travel/norway/03.svg" alt="Red fishing cabins at blue hour">
+        <img src="photos/travel/norway/04.svg" alt="Frozen waterfall in Geiranger">
+        <img src="photos/travel/norway/05.svg" alt="Aurora curtains over the sea">
+        <img src="photos/travel/norway/06.svg" alt="Ice-covered jetty at midnight blue">
+      </div>
+    </article>
+
+  </div><!-- /.container -->
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button class="lb-close" id="lb-close" aria-label="Close">&times;</button>
+    <button class="lb-prev"  id="lb-prev"  aria-label="Previous photo">&#8249;</button>
+    <img id="lb-img" src="" alt="">
+    <button class="lb-next"  id="lb-next"  aria-label="Next photo">&#8250;</button>
+  </div>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>&copy; <span id="year"></span> Louis de Neve</span>
+      <ul class="footer-links">
+        <li><a href="travel.html">Travel</a></li>
+        <li><a href="academic.html">Academic</a></li>
+        <li><a href="mailto:louis@louisdeneve.com">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>
