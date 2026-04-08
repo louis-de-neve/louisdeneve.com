@@ -75,7 +75,7 @@
         async function fetchSubstackPosts() {
             try {
                 // Using a CORS proxy service - you might want to set up your own
-                const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${SUBSTACK_URL}/feed.xml`);
+                const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${SUBSTACK_URL}/feed.xml?t=${Date.now()}`);
                 const data = await response.json();
                 
                 if (data.status === 'ok') {
