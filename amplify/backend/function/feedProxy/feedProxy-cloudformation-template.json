@@ -1,0 +1,12 @@
+{
+  "Resources": {
+    "LambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Handler": "index.handler",
+        "Runtime": "nodejs18.x",
+        "Timeout": 10
+      }
+    }
+  }
+}
