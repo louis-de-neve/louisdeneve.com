@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "paths": {
+    "/feed": {
+      "name": "/feed",
+      "lambdaFunction": "feedProxy"
+    }
+  }
+}

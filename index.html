@@ -79,6 +79,30 @@
                 const response = await fetch(url);
                 const res = await fetch("/api/feed");
                 const xml = await res.text(); 
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(xml, 'application/xml');
+
+                if (xmlDoc.querySelector('parsererror')) {
+                    throw new Error('Invalid XML feed');
+                }
+
+                const xmlToJson = (doc) => ({
+                    channel: {
+                        title: doc.querySelector('channel > title')?.textContent?.trim() || '',
+                        link: doc.querySelector('channel > link')?.textContent?.trim() || '',
+                        description: doc.querySelector('channel > description')?.textContent?.trim() || '',
+                        items: Array.from(doc.querySelectorAll('channel > item')).map(item => ({
+                            title: item.querySelector('title')?.textContent?.trim() || '',
+                            link: item.querySelector('link')?.textContent?.trim() || '',
+                            pubDate: item.querySelector('pubDate')?.textContent?.trim() || '',
+                            description: item.querySelector('description')?.textContent?.trim() || ''
+                        }))
+                    }
+                });
+
+                const xmlJson = xmlToJson(xmlDoc);
+                console.log('Converted XML to JSON:', xmlJson);
+
                 console.log('Fetched XML from API:',res, '\n', xml);  
                 const data = await response.json();
                 console.log('Fetched Substack posts:', url, '\n', data);
