@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic &mdash; Louis de Neve</title>
+  <meta name="description" content="Research and publications by Louis de Neve in machine learning and climate science.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a class="nav-logo" href="index.html">Louis de Neve</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="travel.html">Travel</a></li>
+        <li><a href="academic.html" class="active">Academic</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <header class="page-header">
+      <h1>Academic</h1>
+      <p>
+        I am a PhD researcher at the intersection of machine learning and climate science.
+        My work focuses on developing interpretable, data-efficient models for weather prediction
+        and climate analysis, with a secondary interest in causal inference applied to geophysical systems.
+      </p>
+    </header>
+
+    <!-- Research projects -->
+    <section class="academic-section">
+      <h2>Research Projects</h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-top">
+            <p class="project-title">Machine Learning for Subseasonal-to-Seasonal Forecasting</p>
+            <span class="project-status status-active">Active</span>
+          </div>
+          <p class="project-desc">
+            Developing deep learning architectures that can skillfully predict climate variability
+            on the 2&ndash;6 week timescale, where useful signal still exists in the ocean and sea-ice state.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Deep Learning</span>
+            <span class="tag">Climate</span>
+            <span class="tag">Forecasting</span>
+            <span class="tag">Transformers</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <p class="project-title">Mechanistic Interpretability Applied to Climate Models</p>
+            <span class="project-status status-active">Active</span>
+          </div>
+          <p class="project-desc">
+            Borrowing sparse autoencoder techniques from LLM interpretability to understand what
+            representations physics-informed neural networks learn from atmospheric data.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Interpretability</span>
+            <span class="tag">Sparse Autoencoders</span>
+            <span class="tag">Climate Modelling</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <p class="project-title">Causal Discovery in Climate Time Series</p>
+            <span class="project-status status-completed">Completed</span>
+          </div>
+          <p class="project-desc">
+            Applying constraint-based and score-based causal discovery to multivariate climate
+            datasets to identify robust causal relationships between climate indices.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Causal Inference</span>
+            <span class="tag">Time Series</span>
+            <span class="tag">Climate Variability</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section class="academic-section">
+      <h2>Publications</h2>
+
+      <div class="year-group">
+        <p class="year-label">2024</p>
+        <div class="pub-list-full">
+
+          <div class="pub-full">
+            <div class="pub-full-top">
+              <span class="pub-badge badge-journal">Journal</span>
+              <p class="pub-full-title">Towards Interpretable Climate Models: Sparse Autoencoders for Disentangling Atmospheric Circulation Patterns</p>
+            </div>
+            <p class="pub-full-authors">de Neve, L., Hartmann, A., Schulz, M., &amp; Chen, J.</p>
+            <p class="pub-full-venue">Journal of Climate, 2024</p>
+            <p class="pub-doi">DOI: 10.1175/JCLI-D-24-0001</p>
+            <details class="abstract-toggle">
+              <summary>Abstract</summary>
+              <p class="abstract-text">
+                We present a framework for applying sparse autoencoders to reanalysis data with the goal of
+                discovering disentangled representations of large-scale atmospheric dynamics. The learned features
+                recover known teleconnection patterns and reveal previously undercharacterised modes of variability
+                in the mid-latitude circulation.
+              </p>
+            </details>
+          </div>
+
+          <div class="pub-full">
+            <div class="pub-full-top">
+              <span class="pub-badge badge-preprint">Preprint</span>
+              <p class="pub-full-title">Uncertainty Quantification in Neural Network Weather Forecasts via Conformal Prediction</p>
+            </div>
+            <p class="pub-full-authors">de Neve, L., Patel, R., &amp; Hartmann, A.</p>
+            <p class="pub-full-venue">arXiv preprint, 2024</p>
+            <p class="pub-doi">arXiv: 2401.12345</p>
+            <details class="abstract-toggle">
+              <summary>Abstract</summary>
+              <p class="abstract-text">
+                Reliable uncertainty estimates are critical for operational weather forecasting.
+                We adapt split conformal prediction to produce distribution-free, marginally valid prediction
+                intervals for neural network weather forecasts, demonstrating coverage guarantees on
+                held-out test sets spanning multiple seasons.
+              </p>
+            </details>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="year-group">
+        <p class="year-label">2023</p>
+        <div class="pub-list-full">
+
+          <div class="pub-full">
+            <div class="pub-full-top">
+              <span class="pub-badge badge-conference">Conference</span>
+              <p class="pub-full-title">Scaling Laws for Data-Driven Weather Prediction at Kilometre Resolution</p>
+            </div>
+            <p class="pub-full-authors">de Neve, L. &amp; Schulz, M.</p>
+            <p class="pub-full-venue">NeurIPS Workshop on Tackling Climate Change with Machine Learning, 2023</p>
+            <details class="abstract-toggle">
+              <summary>Abstract</summary>
+              <p class="abstract-text">
+                We investigate how prediction skill scales with model capacity and training data volume for
+                deep learning-based numerical weather prediction at convection-permitting resolutions.
+                Our results suggest that current architectures are significantly data-limited rather than
+                parameter-limited.
+              </p>
+            </details>
+          </div>
+
+          <div class="pub-full">
+            <div class="pub-full-top">
+              <span class="pub-badge badge-journal">Journal</span>
+              <p class="pub-full-title">Extreme Precipitation Attribution Using Causal Inference and High-Resolution Climate Ensembles</p>
+            </div>
+            <p class="pub-full-authors">Chen, J., de Neve, L., &amp; M&uuml;ller, K.</p>
+            <p class="pub-full-venue">Geophysical Research Letters, 2023</p>
+            <p class="pub-doi">DOI: 10.1029/2023GL105678</p>
+            <details class="abstract-toggle">
+              <summary>Abstract</summary>
+              <p class="abstract-text">
+                We combine structural causal models with large climate ensembles to attribute changes in the
+                frequency and intensity of extreme precipitation events to anthropogenic forcing. The method
+                provides sharper attribution statements than regression-based approaches and scales to global analysis.
+              </p>
+            </details>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="academic-section">
+      <h2>Contact</h2>
+      <div class="contact-block">
+        <p>
+          For research enquiries, collaboration proposals, or general contact, please email
+          <a href="mailto:louis@louisdeneve.com">louis@louisdeneve.com</a>.
+        </p>
+      </div>
+    </section>
+
+  </div><!-- /.container -->
+
+  <footer>
+    <div class="container footer-inner">
+      <span>&copy; <span id="year"></span> Louis de Neve</span>
+      <ul class="footer-links">
+        <li><a href="travel.html">Travel</a></li>
+        <li><a href="academic.html">Academic</a></li>
+        <li><a href="mailto:louis@louisdeneve.com">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
