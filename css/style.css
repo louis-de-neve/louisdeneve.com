@@ -185,7 +185,6 @@ footer {
   aspect-ratio: 3/2;
   object-fit: cover;
   background: #e8e8e8;
-  image-rendering: optimizeQuality;
 }
 
 .card-body { padding: 14px 16px 18px; }
@@ -286,7 +285,7 @@ footer {
   border-radius: 6px;
   cursor: pointer;
   transition: opacity 0.15s, transform 0.2s;
-  image-rendering: optimizeQuality;
+  image-rendering: auto;
 }
 
 .photo-grid img:hover { opacity: 0.88; transform: scale(1.01); }
@@ -476,4 +475,40 @@ details.abstract-toggle[open] > summary::before {
   .nav-links { gap: 20px; }
   .projects-grid { grid-template-columns: 1fr; }
   .cards-grid    { grid-template-columns: 1fr; }
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: #111;
+  border-radius: 999px;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-1px);
+  opacity: 0.75;
+}
+
+.social-link img {
+  width: 20px;
+  height: 20px;
+}
+
+.hero-socials {
+  margin-top: 18px;
+}
+
+.footer-socials {
+  margin-top: 16px;
 }
