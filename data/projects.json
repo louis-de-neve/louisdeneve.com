@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Machine Learning for Subseasonal-to-Seasonal Forecasting",
+    "status": "active",
+    "description": "Developing deep learning architectures that can skillfully predict climate variability on the 2\u20136 week timescale, where useful signal still exists in the ocean and sea-ice state.",
+    "tags": ["Deep Learning", "Climate", "Forecasting", "Transformers"]
+  },
+  {
+    "title": "Mechanistic Interpretability Applied to Climate Models",
+    "status": "active",
+    "description": "Borrowing sparse autoencoder techniques from LLM interpretability to understand what representations physics-informed neural networks learn from atmospheric data.",
+    "tags": ["Interpretability", "Sparse Autoencoders", "Climate Modelling"]
+  },
+  {
+    "title": "Causal Discovery in Climate Time Series",
+    "status": "completed",
+    "description": "Applying constraint-based and score-based causal discovery to multivariate climate datasets to identify robust causal relationships between climate indices.",
+    "tags": ["Causal Inference", "Time Series", "Climate Variability"]
+  }
+]

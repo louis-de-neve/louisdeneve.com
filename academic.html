@@ -34,58 +34,7 @@
     <!-- Research projects -->
     <section class="academic-section">
       <h2>Research Projects</h2>
-      <div class="projects-grid">
-
-        <div class="project-card">
-          <div class="project-top">
-            <p class="project-title">Machine Learning for Subseasonal-to-Seasonal Forecasting</p>
-            <span class="project-status status-active">Active</span>
-          </div>
-          <p class="project-desc">
-            Developing deep learning architectures that can skillfully predict climate variability
-            on the 2&ndash;6 week timescale, where useful signal still exists in the ocean and sea-ice state.
-          </p>
-          <div class="project-tags">
-            <span class="tag">Deep Learning</span>
-            <span class="tag">Climate</span>
-            <span class="tag">Forecasting</span>
-            <span class="tag">Transformers</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-top">
-            <p class="project-title">Mechanistic Interpretability Applied to Climate Models</p>
-            <span class="project-status status-active">Active</span>
-          </div>
-          <p class="project-desc">
-            Borrowing sparse autoencoder techniques from LLM interpretability to understand what
-            representations physics-informed neural networks learn from atmospheric data.
-          </p>
-          <div class="project-tags">
-            <span class="tag">Interpretability</span>
-            <span class="tag">Sparse Autoencoders</span>
-            <span class="tag">Climate Modelling</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-top">
-            <p class="project-title">Causal Discovery in Climate Time Series</p>
-            <span class="project-status status-completed">Completed</span>
-          </div>
-          <p class="project-desc">
-            Applying constraint-based and score-based causal discovery to multivariate climate
-            datasets to identify robust causal relationships between climate indices.
-          </p>
-          <div class="project-tags">
-            <span class="tag">Causal Inference</span>
-            <span class="tag">Time Series</span>
-            <span class="tag">Climate Variability</span>
-          </div>
-        </div>
-
-      </div>
+      <div class="projects-grid" id="projects-grid"></div>
     </section>
 
     <!-- Publications -->
@@ -135,5 +84,6 @@
   </footer>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="js/academic.js"></script>
 </body>
 </html>
