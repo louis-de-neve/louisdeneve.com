@@ -54,36 +54,18 @@
         <h2>Recent Travel</h2>
         <a class="view-all" href="travel.html">All trips &rarr;</a>
       </div>
-      <div class="cards-grid">
-        <a class="card" href="travel.html#patagonia">
-          <img class="card-cover" src="photos/travel/patagonia/01.svg" alt="Patagonia cover photo">
-          <div class="card-body">
-            <p class="card-meta">Venice, Italy &mdash; September 2025</p>
-            <p class="card-title">Italy</p>
-            <p class="card-excerpt">Went to italy y'know.</p>
-          </div>
-        </a>
-      </div>
+      <div id="home-travel-root" class="cards-grid" aria-live="polite"></div>
     </div>
   </section>
 
   <!-- Recent publications -->
   <section class="home-section">
     <div class="container">
-      <div class="section-header">
-        <h2>Recent Publications</h2>
-        <a class="view-all" href="academic.html">All publications &rarr;</a>
-      </div>
-      <div class="pub-list">
-        <div class="pub-item">
-          <span class="pub-badge badge-journal">Preprint</span>
-          <div>
-            <p class="pub-title"><a href="https://doi.org/10.22541/essoar.176306454.47868043/v1">Taylor columns and carbon flux: The impacts of Southern Ocean seamounts on upper ocean productivity, as observed by underwater gliders</a></p>
-            <p class="pub-authors">De Neve, L. F. C., Hendry, K. H., Brearley, J. A., Lucas, N. S. &amp; Briggs, N.</p>
-            <p class="pub-venue">2025</p>
-          </div>
-        </div>
-      </div>
+    <div class="section-header">
+      <h2>Recent Publications</h2>
+      <a class="view-all" href="academic.html">All publications &rarr;</a>
+    </div>
+    <div id="home-publications-root" class="pub-list" aria-live="polite"></div>
     </div>
   </section>
 
@@ -100,5 +82,7 @@
   </footer>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script type="module" src="js/home-travel.js"></script>
+  <script type="module" src="js/home-publications.js"></script>
 </body>
 </html>

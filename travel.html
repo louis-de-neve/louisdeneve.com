@@ -27,61 +27,12 @@
       <p>Photography and writing from travels across six continents. I try to document places with care — landscape, light, and the small details that tell a story.</p>
     </header>
 
-    <!-- Patagonia -->
-    <article class="trip" id="patagonia" data-trip="patagonia">
-      <div class="trip-location">Torres del Paine, Chile</div>
-      <div class="trip-header">
-        <h2>Patagonia: At the End of the World</h2>
-        <span class="trip-date">March 2024</span>
-      </div>
-      <p class="trip-desc">
-        Trekking through the dramatic landscapes of southern Patagonia — wind-battered plains, turquoise glacial lakes, and the iconic granite spires of Torres del Paine. Five days on the W Trek, condors overhead, and a puma crossing the path at dusk.
-      </p>
-      <div class="photo-grid"></div>
-    </article>
+    <!-- Trips (populated from data/trips.json) -->
+    <div id="trips-root"></div>
+ 
+   </div><!-- /.container -->
 
-    <!-- Japan -->
-    <article class="trip" id="japan" data-trip="japan">
-      <div class="trip-location">Kyoto &amp; Nikko, Japan</div>
-      <div class="trip-header">
-        <h2>Autumn Colours in Rural Japan</h2>
-        <span class="trip-date">November 2023</span>
-      </div>
-      <p class="trip-desc">
-        Chasing koyo — the Japanese autumn colour season — through ancient temple gardens and forested mountain roads. The garden at Tofuku-ji before dawn; the Shinkyo Bridge framed in gold; the long blue twilight of Nikko's cedar forest.
-      </p>
-      <div class="photo-grid"></div>
-    </article>
-
-    <!-- Morocco -->
-    <article class="trip" id="morocco" data-trip="morocco">
-      <div class="trip-location">Merzouga, Morocco</div>
-      <div class="trip-header">
-        <h2>Into the Sahara</h2>
-        <span class="trip-date">April 2023</span>
-      </div>
-      <p class="trip-desc">
-        A camel trek into the Erg Chebbi dunes, sleeping under an impossible sky of stars on the edge of the Sahara. Then north through the Atlas to the blue city of Chefchaouen, where every alleyway is washed in shades of cobalt and indigo.
-      </p>
-      <div class="photo-grid"></div>
-    </article>
-
-    <!-- Norway -->
-    <article class="trip" id="norway" data-trip="norway">
-      <div class="trip-location">Lofoten &amp; Geiranger, Norway</div>
-      <div class="trip-header">
-        <h2>The Norwegian Fjords in Winter</h2>
-        <span class="trip-date">February 2022</span>
-      </div>
-      <p class="trip-desc">
-        Searching for the northern lights above snow-covered rorbuer fishing cabins in the Lofoten archipelago. After two cloudy nights, the sky cleared to reveal dancing curtains of emerald and magenta that filled the entire sky.
-      </p>
-      <div class="photo-grid"></div>
-    </article>
-
-  </div><!-- /.container -->
-
-  <!-- Lightbox -->
+   <!-- Lightbox -->
   <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
     <button class="lb-close" id="lb-close" aria-label="Close">&times;</button>
     <button class="lb-prev"  id="lb-prev"  aria-label="Previous photo">&#8249;</button>
@@ -102,6 +53,7 @@
   </footer>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script type="module" src="js/travel-trips.js"></script>
   <script src="js/gallery.js"></script>
-</body>
-</html>
+ </body>
+ </html>

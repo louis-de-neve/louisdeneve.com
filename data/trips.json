@@ -1,0 +1,30 @@
+[
+  {
+    "id": "patagonia",
+    "title": "Patagonia: At the End of the World",
+    "date": "2024-03-01",
+    "location": "Torres del Paine, Chile",
+    "description": "Trekking through the dramatic landscapes of southern Patagonia — wind-battered plains, turquoise glacial lakes, and the iconic granite spires of Torres del Paine. Five days on the W Trek, condors overhead, and a puma crossing the path at dusk."
+  },
+  {
+    "id": "japan",
+    "title": "Autumn Colours in Rural Japan",
+    "date": "2023-11-01",
+    "location": "Kyoto & Nikko, Japan",
+    "description": "Chasing koyo — the Japanese autumn colour season — through ancient temple gardens and forested mountain roads."
+  },
+  {
+    "id": "morocco",
+    "title": "Into the Sahara",
+    "date": "2023-04-01",
+    "location": "Merzouga, Morocco",
+    "description": "A camel trek into the Erg Chebbi dunes and the blue city of Chefchaouen."
+  },
+  {
+    "id": "norway",
+    "title": "The Norwegian Fjords in Winter",
+    "date": "2022-02-01",
+    "location": "Lofoten & Geiranger, Norway",
+    "description": "Searching for the northern lights above snow-covered fishing cabins in the Lofoten archipelago."
+  }
+]
