@@ -1,40 +1,35 @@
 [
   {
-    "id": "japan",
+    "id": "france25",
+    "title": "France25",
     "images": [
-      "01.svg",
-      "02.svg",
-      "06.svg"
+      "20250722_140703.jpg",
+      "IMG-20250721-WA0001.jpg",
+      "IMG-20250722-WA0023.jpg",
+      "IMG-20250724-WA0000.jpg"
     ]
   },
   {
-    "id": "morocco",
+    "id": "india23",
+    "title": "India23",
     "images": [
-      "01.svg",
-      "02.svg",
-      "03.svg"
+      "IMG_0030.jpg",
+      "IMG_0048.jpg",
+      "IMG_9686.jpg",
+      "IMG_9875.jpg",
+      "IMG_9905.jpg"
     ]
   },
   {
-    "id": "norway",
+    "id": "interrail23",
+    "title": "Interrail23",
     "images": [
-      "01.svg",
-      "02.svg",
-      "03.svg",
-      "04.svg",
-      "05.svg",
-      "06.svg"
-    ]
-  },
-  {
-    "id": "patagonia",
-    "images": [
-      "01.svg",
-      "02.svg",
-      "03.svg",
-      "04.svg",
-      "05.svg",
-      "06.svg"
+      "20230913_121826.jpg",
+      "20230913_162637.jpg",
+      "20230913_165042.jpg",
+      "20230915_195154.jpg",
+      "20230917_202113.jpg",
+      "20230922_111409.jpg"
     ]
   }
 ]

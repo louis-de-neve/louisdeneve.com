@@ -180,7 +180,13 @@ footer {
 
 .card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-color: #d0d0d0; }
 
-.card-cover { width: 100%; aspect-ratio: 3/2; object-fit: cover; background: #e8e8e8; }
+.card-cover {
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  background: #e8e8e8;
+  image-rendering: optimizeQuality;
+}
 
 .card-body { padding: 14px 16px 18px; }
 
@@ -280,6 +286,7 @@ footer {
   border-radius: 6px;
   cursor: pointer;
   transition: opacity 0.15s, transform 0.2s;
+  image-rendering: optimizeQuality;
 }
 
 .photo-grid img:hover { opacity: 0.88; transform: scale(1.01); }

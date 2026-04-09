@@ -1,30 +1,26 @@
 [
   {
-    "id": "patagonia",
-    "title": "Patagonia: At the End of the World",
-    "date": "2024-03-01",
-    "location": "Torres del Paine, Chile",
-    "description": "Trekking through the dramatic landscapes of southern Patagonia — wind-battered plains, turquoise glacial lakes, and the iconic granite spires of Torres del Paine. Five days on the W Trek, condors overhead, and a puma crossing the path at dusk."
+    "id": "france25",
+    "title": "France Road Trip",
+    "date": "2025-07-19",
+    "location": "France",
+    "description": "Road trip through France.",
+    "headerImage": "IMG-20250721-WA0001.jpg"
   },
   {
-    "id": "japan",
-    "title": "Autumn Colours in Rural Japan",
-    "date": "2023-11-01",
-    "location": "Kyoto & Nikko, Japan",
-    "description": "Chasing koyo — the Japanese autumn colour season — through ancient temple gardens and forested mountain roads."
+    "id": "india23",
+    "title": "Return to India",
+    "date": "2023-08-01",
+    "location": "Tamil Nadu & Kerala, India",
+    "description": "First time back since 2008, felt surprisingly familiar. Visited Chennai, Pondicherry, Thanjavur, Madurai, Tirrupur, Cochin.",
+    "headerImage": "IMG_9686.jpg"
   },
   {
-    "id": "morocco",
-    "title": "Into the Sahara",
-    "date": "2023-04-01",
-    "location": "Merzouga, Morocco",
-    "description": "A camel trek into the Erg Chebbi dunes and the blue city of Chefchaouen."
-  },
-  {
-    "id": "norway",
-    "title": "The Norwegian Fjords in Winter",
-    "date": "2022-02-01",
-    "location": "Lofoten & Geiranger, Norway",
-    "description": "Searching for the northern lights above snow-covered fishing cabins in the Lofoten archipelago."
+    "id": "interrail23",
+    "title": "Scandinavia Interrail",
+    "date": "2023-09-14",
+    "location": "Denmark, Sweden & Norway",
+    "description": "Train journey!!! With James, Henry & Robbie for most, then just James for Oslo and Bergen. Crazy place - I want to retire here...",
+    "headerImage": "20230915_195154.jpg"
   }
 ]
