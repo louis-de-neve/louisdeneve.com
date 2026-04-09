@@ -74,4 +74,26 @@
     .catch(function (err) {
       console.error('Failed to load photo manifest:', err);
     });
+
+  document.querySelectorAll('.photo-section[data-manifest]').forEach(function (section) {
+    var manifestUrl = section.getAttribute('data-manifest');
+    var grid = section.querySelector('.photo-grid');
+    if (!grid) return;
+    var basePath = manifestUrl.replace(/\/[^/]+$/, '/');
+    fetch(manifestUrl)
+      .then(function (res) { return res.json(); })
+      .then(function (images) {
+        images.forEach(function (filename) {
+          if (typeof filename !== 'string' || /[<>"']/.test(filename)) return;
+          var img = document.createElement('img');
+          img.src = basePath + filename;
+          img.alt = titleFromFilename(filename);
+          grid.appendChild(img);
+        });
+        initLightbox();
+      })
+      .catch(function (err) {
+        console.error('Failed to load photo manifest:', err);
+      });
+  });
 })();
