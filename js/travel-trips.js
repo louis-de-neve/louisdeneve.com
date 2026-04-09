@@ -43,10 +43,7 @@ function createLightbox() {
 
 function refreshGalleryItems() {
   galleryItems = Array.from(root.querySelectorAll('.photo-grid img')).map(function (img) {
-    return {
-      src: img.dataset.fullSrc || img.src,
-      alt: img.alt,
-    };
+    return { src: img.src, alt: img.alt };
   });
 }
 
@@ -121,16 +118,15 @@ function createTripArticle(trip, images = []) {
 
   orderedImages.forEach((imgName, idx) => {
     const img = document.createElement('img');
-    img.src = `photos/travel/_generated/${trip.id}/${imgName}`;
-    img.dataset.fullSrc = `photos/travel/${trip.id}/${imgName}`;
+    img.src = `photos/travel/${trip.id}/${imgName}`;
     img.alt = `${trip.title || trip.id} — photo ${idx + 1}`;
     img.loading = 'lazy';
     img.addEventListener('click', function () {
       refreshGalleryItems();
       const clickedIndex = galleryItems.findIndex(function (item) {
-        return item.src === img.dataset.fullSrc;
+        return item.src === img.src;
       });
-      openLightbox(clickedIndex);
+      if (clickedIndex >= 0) openLightbox(clickedIndex);
     });
     grid.appendChild(img);
   });

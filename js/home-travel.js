@@ -70,9 +70,7 @@ async function loadTravel() {
       ...selected.map((trip) => {
         const images = imageMap.get(trip.id) || [];
         const headerImage = trip.headerImage || images[0] || '';
-        const cover = headerImage
-          ? `photos/travel/_generated/${trip.id}/${headerImage}`
-          : '';
+        const cover = headerImage ? `photos/travel/${trip.id}/${headerImage}` : '';
         return renderCard(trip, cover);
       })
     );
