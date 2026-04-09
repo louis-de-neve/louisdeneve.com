@@ -3,8 +3,7 @@ frontend:
   phases:
     build:
       commands:
-        - node scripts/generate-manifest.js
-        - node scripts/generate-crops.js
+        - node scripts/generate-manifest.js\
   artifacts:
     baseDirectory: /
     files:
